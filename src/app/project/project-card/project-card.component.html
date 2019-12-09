@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ projectData.name }}</mat-card-title>
+    <mat-card-subtitle>Created at: {{ projectData.created_at | date }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p *ngIf="projectData.description; else noDescriptionMessage">
+      {{ projectData.description }}
+    </p>
+    <ng-template #noDescriptionMessage>
+      <p>
+        This project has no description.
+      </p>
+    </ng-template>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="openInGitHub()">View on GitHub</button>
+  </mat-card-actions>
+</mat-card>
