@@ -1,3 +1,3 @@
-<p>projects-view works!</p>
-
-<men-project-card *ngFor="let project of (projects$ | async)" [projectData]="project"></men-project-card>
+<div fxLayout="row wrap" fxLayout.xs="column" fxFlexFill>
+  <men-project-card *ngFor="let project of projects$ | async" [projectData]="project" fxFlex.md="44" fxFlex.sm="100"></men-project-card>
+</div>
