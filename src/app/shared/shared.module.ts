@@ -21,8 +21,7 @@ import { MaterialModule } from '../material/material.module';
     HttpClientModule,
     LayoutModule,
     MaterialModule,
-    FlexLayoutModule,
-    BrowserAnimationsModule
+    FlexLayoutModule
   ]
 })
 export class SharedModule { }
