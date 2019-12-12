@@ -1,9 +1,11 @@
 @import '~@angular/material/theming';
+@import './colors/men-blue.scss';
+@import './colors/men-yellow.scss';
 
 @include mat-core();
-
-$men-o-app-primary: mat-palette($mat-deep-purple);
-$men-o-app-accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+// $men-o-app-primary: mat-palette($mat-deep-purple);
+$men-o-app-primary: mat-palette($men-blue, 100, 50, 200);
+$men-o-app-accent:  mat-palette($mat-yellow, 800);
 $men-o-app-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
