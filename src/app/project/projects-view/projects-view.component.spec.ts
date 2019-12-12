@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsViewComponent } from './projects-view.component';
+import { SharedModule } from '../../shared/shared.module';
+import { GitHubApiService } from '../services/github-api.service';
+import { ProjectCardComponent } from '../project-card/project-card.component';
 
 describe('ProjectsViewComponent', () => {
   let component: ProjectsViewComponent;
@@ -8,9 +11,10 @@ describe('ProjectsViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectsViewComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule],
+      declarations: [ProjectsViewComponent, ProjectCardComponent],
+      providers: [GitHubApiService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

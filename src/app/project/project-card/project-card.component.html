@@ -1,11 +1,11 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ projectData.name }}</mat-card-title>
-    <mat-card-subtitle>Created at: {{ projectData.created_at | date }}</mat-card-subtitle>
+    <mat-card-title>{{ project?.name }}</mat-card-title>
+    <mat-card-subtitle>Created at: {{ project?.created_at | date }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p *ngIf="projectData.description; else noDescriptionMessage">
-      {{ projectData.description }}
+    <p *ngIf="project?.description; else noDescriptionMessage">
+      {{ project.description }}
     </p>
     <ng-template #noDescriptionMessage>
       <p>

@@ -8,10 +8,10 @@ import { IRepositoryInfo } from '../models';
 })
 export class ProjectCardComponent {
 
-  @Input() projectData: IRepositoryInfo;
+  @Input() project: IRepositoryInfo;
 
   openInGitHub() {
-    window.open(this.projectData.html_url, '_blank');
+    window.open(this.project.html_url, '_blank');
   }
 
 }
